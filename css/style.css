@@ -38,14 +38,30 @@ body{
   top: 40px;
   left: 40px;
 }
-
+.grow{
+  transition: all 1.5s ease-in-out;
+}
+.grow:hover{
+  transform: scale(1.15);
+}
 .logo{
   height: 35px;
+}
+.logo:hover{
+  animation: pulse 2s ease;
+}
+
+.text-box{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .heading-primary{
   color: #fff;
   text-transform: uppercase;
+  backface-visibility: hidden;
 }
 
 .heading-primary-main{
@@ -53,12 +69,55 @@ body{
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
+
+  animation: pulse-hide 1.25s ease-in;
 }
 
 .heading-primary-sub{
   display: block;
-  font-size: 60px;
+  font-size: 20px;
   font-weight: 700;
-  letter-spacing: 17.5px;
+  letter-spacing: 17.25px;
+  animation: moveInBottom 2.5s ease-in;
+}
+@keyframes pulse {
+  0%{
+    opacity: 60%;
+  }
+  25%{
+    opacity: 65%;
+  }
+  50%{
+    opacity: 80%;
+  }
+  75%{
+      opacity: 90%;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes pulse-hide {
+  0%{
+    opacity: 0;
+  }
+  40%{
+    opacity: 45%;
+  }
+  75%{
+      opacity: 90%;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 
+@keyframes moveInBottom{
+  0%{
+    opacity: 0;
+    transform: translate(0, 10px)
+  }
+  100%{
+    transform: translate(0);
+  }
 }
