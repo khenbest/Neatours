@@ -1,0 +1,23 @@
+{
+  "name": "behold-the-sass",
+  "version": "1.0.0",
+  "description": "Sass-Tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khenbest/Behold-the-SASS.git"
+  },
+  "author": "Kenny Henbest + jonas.io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khenbest/Behold-the-SASS/issues"
+  },
+  "homepage": "https://github.com/khenbest/Behold-the-SASS#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
