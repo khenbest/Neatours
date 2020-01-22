@@ -1,7 +1,7 @@
 .composition {
     position: relative;
     &__photo{
-        width: 55%;
+        width: 70%;
         box-shadow: 0 1.5rem 4rem rgba($black, .4);
         border-radius: 2px;
         position: absolute;
@@ -10,17 +10,17 @@
 
         &--p1{
             left: 0;
-            top: -2rem;
+            top: -4rem;
         }
         
         &--p2{
-            right: 0;
-            top: 2rem;
+            left: 65%;
+            top: 1rem;
         }
         
         &--p3{
-            left: 20%;
-            top: 10rem;
+            left: 25%;
+            top: 12rem;
         }
         
         &:hover{
