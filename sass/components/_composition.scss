@@ -7,6 +7,7 @@
         position: absolute;
         z-index: 10;
         transform: all .2s;
+        outline-offset: 2rem;
 
         &--p1{
             left: 0;
@@ -24,10 +25,17 @@
         }
         
         &:hover{
-            transform: scale(1.05);
+            //outline:
+            padding: 1rem;
+            border: .75rem double $white;
+            border-image: -webkit-linear-gradient(90deg, $primary-light, $primary-dark) 1;
+            transform: scale(1.1) translateY(-.5rem);
             box-shadow: 0 .25rem 4rem rgba($black, .5);
             z-index: 20;
         }
+        
     }
-
+    &:hover &__photo:not(:hover){
+        transform: scale(.95);
+     }
 }
