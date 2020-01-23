@@ -205,9 +205,9 @@ body {
       left: 25%;
       top: 12rem; }
     .composition__photo:hover {
-      padding: 1rem;
-      border: 0.75rem double #fff;
-      border-image: -webkit-linear-gradient(90deg, #7ed56f, #28b485) 1;
+      padding: .75rem;
+      border: solid 0.75rem #28b485;
+      border-image: linear-gradient(to top right, #7ed56f, #28b485) 1;
       transform: scale(1.1) translateY(-0.5rem);
       box-shadow: 0 0.25rem 4rem rgba(0, 0, 0, 0.5);
       z-index: 20; }

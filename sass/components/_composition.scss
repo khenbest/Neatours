@@ -25,10 +25,9 @@
         }
         
         &:hover{
-            //outline:
-            padding: 1rem;
-            border: .75rem double $white;
-            border-image: -webkit-linear-gradient(90deg, $primary-light, $primary-dark) 1;
+            padding: .75rem;
+            border:  solid .75rem $primary-dark;
+            border-image: linear-gradient(to top right, $primary-light, $primary-dark) 1;
             transform: scale(1.1) translateY(-.5rem);
             box-shadow: 0 .25rem 4rem rgba($black, .5);
             z-index: 20;
