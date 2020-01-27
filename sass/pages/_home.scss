@@ -3,3 +3,22 @@
     padding: 25rem 0;
     margin-top: -20vh;
 }
+.section-grey {
+    background-color: $grey-light-1;
+    padding: 7rem 0;
+}
+.section-features {
+    padding: 30rem 0;
+    background-image: linear-gradient(to right bottom,
+    rgba($primary-light, 0.8),
+    rgba($primary-dark, 0.8)),
+    url(../../img/neature/nat-4.jpg);
+    background-size: cover;
+    transform: skewY(-6deg);
+    margin-top: -10vh;
+
+    & > * {
+    transform: skewY(6deg);
+        
+    }
+}
