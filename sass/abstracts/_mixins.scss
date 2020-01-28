@@ -13,7 +13,7 @@
 }
 @mixin gradient-clip-blue {
     display: inline-block;
-    background-image: linear-gradient(to right, rgb(25,225,255), rgb(215,80,255));
+    background-image: linear-gradient(to right, rgb(25,225,255), rgb(215,75,255));
     -webkit-background-clip: text;
     color: transparent;
 }
