@@ -186,6 +186,16 @@ body {
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
 
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem; }
+  .card__side {
+    background-color: orange;
+    height: 50rem;
+    transition: all .8s; }
+  .card:hover .card__side {
+    transform: rotateY(180); }
+
 .composition {
   position: relative; }
   .composition__photo {
@@ -298,3 +308,8 @@ body {
   margin-top: -10vh; }
   .section-features > * {
     transform: skewY(6deg); }
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 10rem 0 10rem 0;
+  margin-top: -5rem; }
