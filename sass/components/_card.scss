@@ -13,7 +13,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        backface-visibility: hidden !important;
+        backface-visibility: hidden;
         border-radius: 4px;
         box-shadow: 0 1.5rem 4rem rgba($black, .15);
         
@@ -23,13 +23,13 @@
 
         &--back {
             transform: rotateY(180deg);
-            &-1{
+            &--1{
                 background-image: linear-gradient(to right bottom, $secondary-light, $secondary-dark);
             }
-            &-2{
+            &--2{
                 background-image: linear-gradient(to right bottom, $primary-light, $primary-dark);
             }
-            &-3{
+            &--3{
                 background-image: linear-gradient(to right bottom, $tertiary-light, $tertiary-dark);
             }
         }
