@@ -101,9 +101,11 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   color: transparent;
-  transition: all .2s;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  transition: all .2s; }
   .heading-secondary:hover {
+    text-shadow: 0.3rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .heading-secondary--prominent:hover {
     transform: skewX(-5deg);
     text-shadow: 0.3rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
@@ -128,6 +130,15 @@ body {
 
 .u-mb-lg {
   margin-bottom: 8rem; }
+
+.u-mt-sm {
+  margin-top: 1.25rem; }
+
+.u-mt-md {
+  margin-top: 4rem; }
+
+.u-mt-lg {
+  margin-top: 8rem; }
 
 .btn {
   font-size: 1.6rem; }
@@ -164,6 +175,11 @@ body {
     color: #777; }
     .btn--white::after {
       background-color: #fff; }
+  .btn--primary {
+    background-color: #55c57a;
+    color: #fff; }
+    .btn--primary::after {
+      background-color: #55c57a; }
   .btn--animated {
     animation: appear .5s ease-out 3s;
     animation-fill-mode: backwards; }
@@ -221,13 +237,15 @@ body {
     height: 22rem;
     background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
     .card__picture--1 {
       background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../../img/neature/nat-5.jpg); }
     .card__picture--2 {
-      background-image: url(../../img/neature/nat-6.jpg); }
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../../img/neature/nat-6.jpg); }
     .card__picture--3 {
-      background-image: url(../../img/neature/nat-7.jpg); }
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../../img/neature/nat-7.jpg); }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -244,6 +262,10 @@ body {
     box-decoration-break: clone; }
     .card__heading-span--1 {
       background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
   .card__details {
     padding: 3rem; }
     .card__details ul {
@@ -256,6 +278,75 @@ body {
         padding: 1rem; }
         .card__details ul li:not(:last-child) {
           border-bottom: 1 px solid #eee; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__price-box {
+    margin-bottom: 8rem;
+    color: #fff; }
+  .card__price-only {
+    font-size: 2.5rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-left: 1.5rem;
+    margin-bottom: -1.25rem; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 300; }
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  transform: skewX(-11deg);
+  backface-visibility: hidden; }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    position: relative;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-2rem) skewX(11deg);
+    backface-visibility: hidden; }
+  .story__image {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    transition: all .1s; }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 25%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden; }
+  .story__text {
+    transform: skewX(11deg);
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    backface-visibility: hidden; }
+  .story:hover .story__image {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(90%);
+    backface-visibility: hidden; }
 
 .composition {
   position: relative; }
@@ -375,3 +466,7 @@ body {
   background-color: #f7f7f7;
   padding: 10rem 0 10rem 0;
   margin-top: -5rem; }
+
+.section-stories {
+  padding: 15rem 0;
+  background-color: #f7f7f7; }

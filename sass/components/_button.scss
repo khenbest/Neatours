@@ -41,8 +41,15 @@
       color: $grey-dark;
 
       &::after{
-          background-color: $white;
-        }
+        background-color: $white;
+      }
+    }
+    &--primary{
+      background-color: $primary;
+      color: $white;
+      &::after{
+        background-color: $primary;
+      }
     }
     &--animated{
       animation: appear .5s ease-out 3s;

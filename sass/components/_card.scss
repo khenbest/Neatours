@@ -49,15 +49,17 @@
         background-blend-mode: screen;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
 
         &--1 {
             background-image: linear-gradient(to right bottom, $secondary-light, $secondary-dark), url(../../img/neature/nat-5.jpg);
         }
         &--2 {
-            background-image: url(../../img/neature/nat-6.jpg);
+            background-image: linear-gradient(to right bottom, $primary-light, $primary-dark), url(../../img/neature/nat-6.jpg);
         }
         &--3 {
-            background-image: url(../../img/neature/nat-7.jpg);
+            background-image: linear-gradient(to right bottom, $tertiary-light, $tertiary-dark), url(../../img/neature/nat-7.jpg);
         }
     }
     &__heading {
@@ -80,6 +82,12 @@
         &--1{
             background-image: linear-gradient(to right bottom, rgba($secondary-light, .85), rgba($secondary-dark, .85));
         }
+        &--2{
+            background-image: linear-gradient(to right bottom, rgba($primary-light, .85), rgba($primary-dark, .85));
+        }
+        &--3{
+            background-image: linear-gradient(to right bottom, rgba($tertiary-light, .85), rgba($tertiary-dark, .85));
+        }
     }
     &__details{
         padding: 3rem;
@@ -100,4 +108,29 @@
             }
         }
     }
+    
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+    &__price-box{
+        margin-bottom: 8rem;
+        color: $white;
+    }
+    &__price-only{
+        font-size: 2.5rem;
+        font-weight: 200;
+        text-transform: uppercase;
+        margin-left: 1.5rem;
+        margin-bottom: -1.25rem;
+    }
+    &__price-value{
+        font-size: 6rem;
+        font-weight: 300;
+    }
+
 }
