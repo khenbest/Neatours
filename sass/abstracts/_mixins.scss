@@ -5,6 +5,12 @@
        clear: both;
    } 
 }
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 @mixin gradient-clip {
     display: inline-block;
     background-image: linear-gradient(to right, #7ed56f, #28b485);
