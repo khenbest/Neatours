@@ -17,7 +17,7 @@
   &__logo {
     width: 15rem;
     height: auto;
-    @include screen(phone) {
+    @include screen(tab-p) {
       padding-bottom: 2rem;
     }
   }

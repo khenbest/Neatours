@@ -46,6 +46,24 @@ body {
   color: transparent;
   letter-spacing: 2px;
   transition: all 0.2s;
+  &--orange {
+    @include gradient-clip-orange;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: transparent;
+    letter-spacing: 2px;
+    transition: all 0.2s;
+  }
+  &--blue {
+    @include gradient-clip-blue;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: transparent;
+    letter-spacing: 2px;
+    transition: all 0.2s;
+  }
 
   @include screen(tab-p) {
     font-size: 3rem;

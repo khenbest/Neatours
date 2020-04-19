@@ -17,17 +17,20 @@
   -webkit-background-clip: text;
   color: transparent;
 }
-@mixin gradient-clip-blue {
+@mixin gradient-clip-orange {
   display: inline-block;
-  background-image: linear-gradient(
-    to right,
-    rgb(25, 225, 255),
-    rgb(215, 75, 255)
-  );
+  background-image: linear-gradient(to right, #ffb900, #ff7730);
   -webkit-background-clip: text;
   color: transparent;
 }
-
+@mixin gradient-clip-blue {
+  display: inline-block;
+  background-image: linear-gradient(to right, $tertiary-light, $tertiary-dark);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+// rgb(25, 225, 255),
+// rgb(215, 75, 255)
 //Media Queries
 /*
 0-600px: Phone
