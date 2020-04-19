@@ -1,58 +1,72 @@
 .story {
-    width: 75%;
-    margin: 0 auto;
-    box-shadow:  0 3rem 6rem rgba($black, .1);
-    background-color: rgba($white, .6);
-    border-radius: 3px;
-    padding: 6rem;
-    padding-left: 9rem;
-    font-size: $default-font-size;
-    transform: skewX(-11deg);
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba($black, 0.1);
+  background-color: rgba($white, 0.6);
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: $default-font-size;
+  transform: skewX(-11deg);
+  backface-visibility: hidden;
+
+  @include screen(tab-p) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+  @include screen(phone) {
+    transform: skewX(0);
+  }
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    position: relative;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-2rem) skewX(11deg);
     backface-visibility: hidden;
 
-    &__shape {
-        width: 15rem;
-        height: 15rem;
-        float: left;
-        position: relative;
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
-        transform: translateX(-2rem) skewX(11deg);
-        backface-visibility: hidden;
+    @include screen(phone) {
+      transform: translateX(-2rem) skewX(0);
     }
-    &__image{
-        height: 100%;
-        transform: translateX(-4rem) scale(1.4);
-        transition: all .1s;
+  }
+  &__image {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    transition: all 0.1s;
+  }
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 25%);
+    color: $white;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+  }
+  &__text {
+    transform: skewX(11deg);
+    backface-visibility: hidden;
+    @include screen(phone) {
+      transform: skewX(0);
     }
-    &__caption{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, 25%);
-        color: $white;
-        text-transform: uppercase;
-        font-size: 1.5rem;
-        text-align: center;
-        opacity: 0;
-        transition: all .5s;
-        backface-visibility: hidden;
-    }
-    &__text {
-        transform: skewX(11deg);
-        backface-visibility: hidden;
-    }
-    // &:hover &__caption {
-    //     opacity: 1;
-    //     transform: translate(-50%, -50%);
-    //     backface-visibility: hidden;
-    // }
-    // &:hover &__image {
-    //     transform: translateX(-4rem) scale(1);
-    //     filter: blur(3px) brightness(90%);
-    //     backface-visibility: hidden;
-    // }
-
+  }
+  // &:hover &__caption {
+  //     opacity: 1;
+  //     transform: translate(-50%, -50%);
+  //     backface-visibility: hidden;
+  // }
+  // &:hover &__image {
+  //     transform: translateX(-4rem) scale(1);
+  //     filter: blur(3px) brightness(90%);
+  //     backface-visibility: hidden;
+  // }
 }

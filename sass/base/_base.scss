@@ -6,11 +6,24 @@
   box-sizing: inherit;
 }
 
-html{
-  //This defines 1rem as 10px
-  font-size: 62.5%;
+html {
+  font-size: 62.5%; //1rem = 10px
+  @include screen(tab-l) {
+    font-size: 56.25%; //1rem = 9px, 9/16 = 56.25%
+  }
+  @include screen(tab-p) {
+    font-size: 50%; //1rem = 8px, 8/16 = 50%
+  }
+  @include screen(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16 = 75%
+  }
 }
 
-body{
+body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include screen(tab-p) {
+    padding: 0;
+  }
 }

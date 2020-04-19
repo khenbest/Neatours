@@ -8,25 +8,23 @@ $secondary-dark: #ff7730;
 $tertiary-light: #2998ff;
 $tertiary-dark: #5643fa;
 
-
-
 $grey-light-1: #f7f7f7;
 $grey-light-2: #eee;
 
 $grey-dark: #777;
-$grey-darker: #999; 
+$grey-darker: #999;
 $grey-darkest: #333;
 
 $white: #fff;
 $black: #000;
 
 $gradient: linear-gradient(90deg, $primary-light, $primary-dark);
-$gradient-blue: linear-gradient(to right, rgb(25,225,255), rgb(215,80,255));
+$gradient-blue: linear-gradient(to right, rgb(25, 225, 255), rgb(215, 80, 255));
 //FONT
 $default-font-size: 1.6rem;
-
 
 //GRID
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
+$gutter-vertical-sm: 6rem;
 $gutter-horizontal: 6rem;

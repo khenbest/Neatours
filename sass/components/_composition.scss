@@ -1,40 +1,77 @@
 .composition {
-    position: relative;
-    &__photo{
-        width: 70%;
-        box-shadow: 0 1.5rem 4rem rgba($black, .4);
-        border-radius: 2px;
-        position: absolute;
-        z-index: 10;
-        transform: all .2s;
-        outline-offset: 2rem;
+  position: relative;
+  &__photo {
+    width: 65%;
+    box-shadow: 0 1.5rem 4rem rgba($black, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transform: all 0.2s;
+    outline-offset: 2rem;
 
-        &--p1{
-            left: 0;
-            top: -4rem;
-        }
-        
-        &--p2{
-            left: 65%;
-            top: 1rem;
-        }
-        
-        &--p3{
-            left: 25%;
-            top: 12rem;
-        }
-        
-        &:hover{
-            padding: .75rem;
-            border:  solid .75rem $primary-dark;
-            border-image: linear-gradient(to top right, $primary-light, $primary-dark) 1;
-            transform: scale(1.1) translateY(-.5rem);
-            box-shadow: 0 .25rem 4rem rgba($black, .5);
-            z-index: 20;
-        }
-        
+    &--p1 {
+      left: -4rem;
+      top: -4rem;
+      @include screen(tab-p) {
+        left: -3.5rem;
+        top: -3.5rem;
+      }
+      @include screen(phone) {
+        left: -3rem;
+        top: -3rem;
+      }
+      @include screen(phone-xs) {
+        left: -1.25rem;
+        top: -3rem;
+      }
     }
-    &:hover &__photo:not(:hover){
-        transform: scale(.95);
-     }
+
+    &--p2 {
+      right: -1rem;
+      top: -2rem;
+      @include screen(tab-p) {
+        right: -6rem;
+        top: -1rem;
+      }
+      @include screen(phone) {
+        right: -7.5rem;
+        top: -1rem;
+      }
+      @include screen(phone-xs) {
+        right: -0.5rem;
+        top: -1rem;
+        width: 60%;
+      }
+    }
+
+    &--p3 {
+      left: 15%;
+      top: 13rem;
+      @include screen(tab-p) {
+        left: 15%;
+        top: 11rem;
+      }
+      @include screen(phone) {
+        left: 15%;
+        top: 10rem;
+      }
+      @include screen(phone-xs) {
+        left: 15%;
+        top: 8.5rem;
+      }
+    }
+
+    &:hover {
+      padding: 0.75rem;
+      border: solid 0.75rem $primary-dark;
+      border-image: linear-gradient(to top right, $primary-light, $primary-dark)
+        1;
+      transform: scale(1.1) translateY(-0.5rem);
+      box-shadow: 0 0.25rem 4rem rgba($black, 0.5);
+      z-index: 20;
+    }
+  }
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.95);
+  }
 }

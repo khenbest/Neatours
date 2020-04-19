@@ -1,25 +1,67 @@
 @mixin clearfix {
-   &::after{
-       content: "";
-       display: table;
-       clear: both;
-   } 
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 @mixin center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 @mixin gradient-clip {
-    display: inline-block;
-    background-image: linear-gradient(to right, #7ed56f, #28b485);
-    -webkit-background-clip: text;
-    color: transparent;
+  display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 @mixin gradient-clip-blue {
-    display: inline-block;
-    background-image: linear-gradient(to right, rgb(25,225,255), rgb(215,75,255));
-    -webkit-background-clip: text;
-    color: transparent;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    rgb(25, 225, 255),
+    rgb(215, 75, 255)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+//Media Queries
+/*
+0-600px: Phone
+600-900px: Tablet portrait
+900-1200px: Tablet landscape
+1200-1800px: Normal styles
+1800px+: Big desktop
+*/
+
+//Order of configuring responsiveness: base + typog > layout + grid > page layout > components
+@mixin screen($breakpoint) {
+  @if $breakpoint == phone-xs {
+    @media (max-width: 26.57em) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-p {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-l {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
 }
