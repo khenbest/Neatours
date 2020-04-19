@@ -47,7 +47,11 @@ body {
   letter-spacing: 2px;
   transition: all 0.2s;
   &--orange {
-    @include gradient-clip-orange;
+    @include gradient-clip;
+
+    @include screen(tab-p) {
+      @include gradient-clip-orange;
+    }
     font-size: 3.5rem;
     text-transform: uppercase;
     font-weight: 700;
@@ -56,7 +60,11 @@ body {
     transition: all 0.2s;
   }
   &--blue {
-    @include gradient-clip-blue;
+    @include gradient-clip;
+
+    @include screen(tab-p) {
+      @include gradient-clip-blue;
+    }
     font-size: 3.5rem;
     text-transform: uppercase;
     font-weight: 700;

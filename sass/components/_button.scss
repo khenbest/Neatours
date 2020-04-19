@@ -56,10 +56,17 @@
     }
   }
   &--blue {
-    background: $gradient-blue;
+    background-color: $primary;
     color: $white;
     &::after {
-      background-color: $gradient-blue;
+      background-color: $primary;
+    }
+    @include screen(tab-p) {
+      background: $gradient-blue;
+      color: $white;
+      &::after {
+        background-color: $gradient-blue;
+      }
     }
   }
   &--animated {
