@@ -23,12 +23,15 @@
     height: 15rem;
     float: left;
     position: relative;
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
+    overflow: hidden;
     transform: translateX(-2rem) skewX(11deg);
-    backface-visibility: hidden;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+    }
 
     @include screen(phone) {
       transform: translateX(-2rem) skewX(0);
@@ -59,14 +62,16 @@
       transform: skewX(0);
     }
   }
-  // &:hover &__caption {
-  //     opacity: 1;
-  //     transform: translate(-50%, -50%);
-  //     backface-visibility: hidden;
-  // }
-  // &:hover &__image {
-  //     transform: translateX(-4rem) scale(1);
-  //     filter: blur(3px) brightness(90%);
-  //     backface-visibility: hidden;
-  // }
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  &:hover &__image {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(90%);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
 }

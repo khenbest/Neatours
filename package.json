@@ -4,7 +4,9 @@
   "description": "Sass-Tutorial",
   "main": "index.js",
   "scripts": {
-    "compile": "node-sass sass/main.scss css/style.css -w"
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions css/style.comp.css -o css/style.prefix.css"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,9 @@
   "homepage": "https://github.com/khenbest/Behold-the-SASS#readme",
   "dependencies": {},
   "devDependencies": {
-    "node-sass": "^4.13.0"
+    "autoprefixer": "^9.7.6",
+    "concat": "^1.0.3",
+    "node-sass": "^4.13.0",
+    "postcss-cli": "^7.1.0"
   }
 }
