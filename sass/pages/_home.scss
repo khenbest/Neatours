@@ -79,7 +79,7 @@
       rgba($white, 0.9) 50%,
       transparent 50%
     ),
-    url(../../img/neature/nat-10.jpg);
+    url(img/neature/nat-10.jpg);
   background-size: 100%;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($black, 0.2);
@@ -91,7 +91,7 @@
         rgba($white, 0.9) 65%,
         transparent 65%
       ),
-      url(../../img/neature/nat-10.jpg);
+      url(img/neature/nat-10.jpg);
     background-size: cover;
   }
   @include screen(tab-p) {
@@ -100,7 +100,7 @@
         rgba($white, 0.9) 0%,
         rgba($white, 0.9) 100%
       ),
-      url(../../img/neature/nat-10.jpg);
+      url(img/neature/nat-10.jpg);
     background-size: cover;
   }
   &__form {
