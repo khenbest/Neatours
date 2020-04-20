@@ -43,27 +43,27 @@
 //Order of configuring responsiveness: base + typog > layout + grid > page layout > components
 @mixin screen($breakpoint) {
   @if $breakpoint == phone-xs {
-    @media (max-width: 26.57em) {
+    @media only screen and (max-width: 26.57em) {
       @content;
     }
   }
   @if $breakpoint == phone {
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       @content;
     }
   }
   @if $breakpoint == tab-p {
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       @content;
     }
   }
   @if $breakpoint == tab-l {
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       @content;
     }
   }
   @if $breakpoint == big-desktop {
-    @media (min-width: 112.5em) {
+    @media only screen and (min-width: 112.5em) {
       @content;
     }
   }

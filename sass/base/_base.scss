@@ -7,6 +7,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%; //1rem = 10px
   @include screen(tab-l) {
     font-size: 56.25%; //1rem = 9px, 9/16 = 56.25%
@@ -26,4 +27,9 @@ body {
   @include screen(tab-p) {
     padding: 0;
   }
+}
+
+::selection {
+  background-color: $primary;
+  color: $white;
 }
