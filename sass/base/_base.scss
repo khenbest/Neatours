@@ -6,14 +6,7 @@
   box-sizing: inherit;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
 html {
-  ::-webkit-scrollbar {
-    display: none;
-  }
   scroll-behavior: smooth;
   font-size: 62.5%; //1rem = 10px
   @include screen(tab-l) {
@@ -28,9 +21,6 @@ html {
 }
 
 body {
-  ::-webkit-scrollbar {
-    display: none;
-  }
   box-sizing: border-box;
   padding: 3rem;
 
@@ -42,4 +32,8 @@ body {
 ::selection {
   background-color: $primary;
   color: $white;
+}
+
+::-webkit-scrollbar {
+  display: none !important;
 }
