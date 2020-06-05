@@ -36,6 +36,9 @@ body {
   background-color: #55c57a;
   color: #fff; }
 
+::-webkit-scrollbar {
+  display: none !important; }
+
 .logo:hover {
   animation: pulse 2s ease; }
 
