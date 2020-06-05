@@ -6,10 +6,11 @@
   box-sizing: inherit;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 html {
-  ::-webkit-scrollbar {
-    display: none;
-  }
   scroll-behavior: smooth;
   font-size: 62.5%; //1rem = 10px
   @include screen(tab-l) {
